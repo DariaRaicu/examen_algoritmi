@@ -1,11 +1,14 @@
 # Problema 2 – Căutare liniară (15p)
 
-from typing import List, Any
+def cautare_liniara(lista,element):
+    for i in range(len(lista)):
+        if lista[i]==element:
+            return i   #returneaza indexul
+        else:
+            return -1   #returneaza -1 daca nu a fost gasit
 
-def linear_search(a: List[Any], x: Any) -> bool:
-    # TODO
-    return False
-
-if __name__ == "__main__":
-    arr = [4, 7, 1, 9]
-    print(linear_search(arr, 7))  # True
+#Exemplu:
+lista=[4,9,3,5,7,10]
+pozitie_element=cautare_liniara(lista,9)
+print("Pozitia elementului 9 este:",pozitie_element)
+   #output: -1   (nu inteleg de ce )
