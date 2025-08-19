@@ -1,29 +1,24 @@
 # Problema 4 – Stivă (20p)
 
-class Stack:
+class Stiva:
     def __init__(self):
-        self._data = []
-
-    def push(self, x):
-        # TODO
-        pass
-
+        self.items=[]
+    def push(self,elemente):
+        self.items.append(elemente)
+        return self
     def pop(self):
-        # TODO
-        pass
-
+        return self.items.pop
     def peek(self):
-        # TODO
-        pass
-
+        return self.items[-1]
     def __repr__(self):
-        return f"Stack({self._data})"
+        return str(self.items)
 
-if __name__ == "__main__":
-    s = Stack()
-    s.push(5)
-    s.push(7)
-    s.pop()
-    s.push(9)
-    print(s.peek())  # 9
-    print(s)
+#Exemplu:
+items=Stiva()
+items.push(5)
+items.push(7)
+items.push(9)
+print("pop:",items.pop())
+print("peek:",items.peek())
+print("Stiva finala:",items)
+#output: Stiva finala: [5, 7, 9]
